@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<namelist_defaults version="2.0.0">
+  <vmix_rich_nml>
+    <rich_mix> 50.0 </rich_mix>
+  </vmix_rich_nml>
+
+  <vmix_kpp_nml>
+    <rich_mix> 50.0 </rich_mix>
+  </vmix_kpp_nml>
+
+  <ecosys_ciso_nml>
+    <ciso_init_ecosys_init_file ocn_grid="gx3v7">ocn/pop/gx3v7/ic/ecosys_jan_IC_gx3v7_Nov2012_corrO2.nc</ciso_init_ecosys_init_file>
+    <ciso_init_ecosys_init_file ocn_grid="gx1v6">ocn/pop/gx1v6/ic/ecosys_jan_IC_gx1v6_corrO2_Feb2013.nc</ciso_init_ecosys_init_file>
+    <ciso_init_ecosys_init_file_fmt>nc</ciso_init_ecosys_init_file_fmt>
+
+    <ciso_tracer_init_ext>
+      <array index='1'>
+        <mod_varname>DI13C</mod_varname>
+        <file_varname>DIC  </file_varname>
+        <scale_factor>1.025</scale_factor>
+      </array>
+      <array index='2'>
+        <mod_varname>DO13C</mod_varname>
+        <file_varname>DOC </file_varname>
+        <scale_factor>1.0 </scale_factor>
+      </array>
+      <array index='3'>
+        <mod_varname>zoo13C</mod_varname>
+        <file_varname>zooC </file_varname>
+        <scale_factor>1.0  </scale_factor>
+      </array>
+    </ciso_tracer_init_ext>
+  </ecosys_ciso_nml>
+</namelist_defaults>
+

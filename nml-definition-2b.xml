@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/xsl" href="http://www.cgd.ucar.edu/~cam/namelist/namelist_definition_2.0.0.xsl"?>
+
+<namelist_definition version='2.0.0'>
+  <namelist name='vmix_rich_nml'>
+    <variable name="rich_mix"
+        type="real"
+        category="vmix"
+        group="derived" >
+Coefficient for Richardson number term.
+
+Default: 50.0
+Note: You must specify both the variable name and namelist name if you change this variable in user_nl_pop2!
+    </variable>
+  </namelist>
+
+  <namelist name='vmix_kpp_nml'>
+    <variable name="rich_mix"
+        type="real"
+        category="kpp"
+        group="derived" >
+Coefficient for Richardson number term.
+
+Default: 50.0
+Note: You must specify both the variable name and namelist name if you change this variable in user_nl_pop2!
+    </variable>
+  </namelist>
+
+  <namelist name='ecosys_ciso_nml'>
+    <variable name="ciso_init_ecosys_init_file"
+        type="char*256" 
+        category="ecosys"
+        input_pathname="abs" >
+      Default: 
+    </variable>
+
+    <variable name="ciso_init_ecosys_init_file_fmt"
+        type="char*256" 
+        category="ecosys" >
+      Default: 'nc'
+    </variable>
+
+    <variable name="ciso_tracer_init_ext"
+        type='array'
+        category="ecosys" >
+      <derived_type>
+        <variable name="mod_varname"
+                  type="char*256" >
+          Default: 
+        </variable>
+
+        <variable name="file_varname"
+                  type="char*256" >
+          Default: 
+        </variable>
+
+        <variable name="scale_factor"
+                  type="real" >
+          Default: 
+        </variable>
+
+        <variable name="default_val"
+                  type="real" >
+          Default: 
+        </variable>
+      </derived_type>
+    </variable>
+  </namelist>
+
+</namelist_definition>
